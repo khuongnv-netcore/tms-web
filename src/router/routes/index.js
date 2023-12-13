@@ -32,8 +32,6 @@ const Routes = [
     path: pathKeys.DASHBOARD,
     title: pathNames.DASHBOARD,
     component: lazy(() => import('../../views/dashBoard/index')),
-    layout: 'BlankLayout'
-    // component: lazy(() => import('../../views/report/debug/index'))
   },
   {
     path: pathKeys.MANAGE_DATA.USER,
