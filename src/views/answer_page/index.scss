@@ -1,0 +1,57 @@
+.landingPage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  .row {
+    justify-content: center;
+    .landingPage-img {
+      width: 600px;
+      height: 415px;
+    }
+    .btn-checkarea {
+      width: 320px;
+      height: 45px;
+    }
+    .btn-login {
+      width: 160px;
+      height: 45px;
+    }
+    .text {
+      margin:0 50px 12px 50px;
+      font-size:16px;
+      line-height:24px;
+      font-family:Arial,sans-serif;
+      color: black !important;
+    }
+  }
+}
+
+.btn-row {
+  justify-content: center;
+  margin: 0 200px 0 200px;
+}
+
+.img {
+  width: 300px;
+  align-self: center;
+  padding: 30px;
+}
+
+.card-text {
+  margin:0 auto 12px auto;
+      font-size:16px;
+      line-height:24px;
+      font-family:Arial,sans-serif;
+      color: #153643 !important;
+}
+
+.btn-submit {
+  color: #4F0885 !important;
+  background-color: white !important;
+  border: 3px solid #4F0885 !important;
+  padding: 15px 102px !important;
+  margin-bottom: 30px !important;
+}

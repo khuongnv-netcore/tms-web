@@ -1,0 +1,114 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: "Build and Test"
+          caches:
+            - nodecustom
+            - yarn
+          script:
+            - yarn install
+            - yarn test
+            - yarn release:development
+          artifacts:
+            - build/**
+      - step:
+            name: "Deploy to Dev"
+            deployment: Dev
+            trigger: automatic
+            script:
+            - echo "Deployment to Dev"
+            - pipe: atlassian/aws-s3-deploy:0.4.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $DEV_BUCKET
+                LOCAL_PATH: 'build/'
+    release/*:
+      - step:
+          name: "Build and Test"
+          caches:
+            - nodecustom
+            - yarn
+          script:
+            - yarn install
+            - yarn test
+            - yarn release:stage
+          artifacts:
+            - build/**
+      - step:
+          name: "Deploy to Stage"
+          deployment: Staging
+          trigger: automatic
+          script:
+            - echo "Deploy to Stage"
+            - pipe: atlassian/aws-s3-deploy:0.4.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $STAGING_BUCKET
+                LOCAL_PATH: 'build/'
+    master:
+      - step:
+           caches:
+            - nodecustom
+            - yarn
+           script:
+            - yarn install
+            - yarn test
+            - yarn release:production
+           artifacts:
+            - build/**
+      - step:
+          name: "Deploy to Production"
+          deployment: Production
+          trigger: manual
+          script:
+            - echo "Deploy to Production"
+            - pipe: atlassian/aws-s3-deploy:0.4.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $PROD_BUCKET
+                LOCAL_PATH: 'build/'
+  pull-requests:
+    feature/*:
+      - step:
+          name: "Build and Test"
+          caches:
+            - nodecustom
+            - yarn
+          script:
+            - yarn install
+            - yarn test
+            - yarn release:development
+          artifacts:
+            - build/**
+      - step:
+            name: "Deploy to Dev"
+            deployment: Dev
+            trigger: manual
+            script:
+            - echo "Deployment to Dev"
+            - pipe: atlassian/aws-s3-deploy:0.4.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $DEV_BUCKET
+                LOCAL_PATH: 'build/'
+
+definitions:
+  caches:
+    nodecustom: ./node_modules
+    yarn: /usr/local/share/.cache/yarn

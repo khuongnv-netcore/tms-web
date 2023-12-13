@@ -1,0 +1,103 @@
+.dashBoardPage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  .row {
+    justify-content: center;
+    .dashBoardPage-img {
+      width: 600px;
+      height: 415px;
+    }
+    .btn-checkarea {
+      width: 320px;
+      height: 45px;
+    }
+    .btn-login {
+      width: 160px;
+      height: 45px;
+    }
+    .text {
+      margin:0 50px 12px 50px;
+      font-size:16px;
+      line-height:24px;
+      font-family:Arial,sans-serif;
+      color: black !important;
+    }
+  }
+}
+
+.btn-row {
+  justify-content: center;
+  margin: 0 200px 0 200px;
+}
+
+.img {
+  width: 300px;
+  align-self: center;
+  padding: 30px;
+}
+
+.disconnect-link{
+  color: #4F0885;
+}
+
+.disconnect-link:hover {
+  text-decoration: underline;
+  color: #4F0885;
+}
+
+.card-text {
+  margin:0 50px 12px 50px;
+      font-size:16px;
+      line-height:24px;
+      font-family:Arial,sans-serif;
+      color: #153643 !important;
+}
+
+.btn-submit {
+  color: #4F0885 !important;
+  background-color: white !important;
+  border: 3px solid #4F0885 !important;
+  padding: 15px 102px !important;
+  margin-bottom: 30px !important;
+}
+
+.btn-logout {
+  color: #4F0885 !important;
+  background-color: white !important;
+  border: 3px solid #4F0885 !important;
+  padding: 15px 102px !important;
+  margin-bottom: 30px !important;
+}
+
+.btn-disconnect {
+  color: #f3eff7 !important;
+  background-color: #EA5455 !important;
+  padding: 15px 102px !important;
+  margin-bottom: 30px !important;
+  max-width: 450px;
+  border:0;  
+  transition: box-shadow .3s;
+}
+
+.btn-disconnect:hover {
+  background-color: #fa7b7b !important;  
+  box-shadow: 0px 4px 15px rgba(33,33,33,.8); 
+}
+
+.btn-connect {
+  color: #f3eff7 !important;
+  background-color: #4F0885 !important;
+  padding: 15px 102px !important;
+  margin-bottom: 30px !important;
+  border:0;  
+  transition: box-shadow .3s;
+}
+
+.btn-connect:hover{
+  background-color: #692d97 !important;
+  box-shadow: 0px 4px 15px rgba(33,33,33,.8); 
+}

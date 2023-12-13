@@ -1,0 +1,74 @@
+
+.txt-title {
+    font-weight: bold !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 16px !important;
+    text-align: left !important;
+    color: black;
+    line-height: 24px;
+}
+
+.txt-body {
+    text-align: center !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 16px !important;
+    color: black !important;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.row {
+    align-items: center;
+}
+
+.btn {
+    align-items: center !important;
+    color: #4F0885 !important;
+    background-color: white !important;
+    padding: 15px 32px !important;
+    border: 3px solid #4F0885 !important;
+    border-radius: 4px;
+    font-weight: bold !important;
+    margin-right: 10px;
+    margin-bottom: 15px !important;
+}
+button:hover {
+    color: white !important;
+    background-color: #4F0885 !important;
+}
+.btn:active {
+    color: white !important;
+    background-color: #4F0885 !important;
+}
+.btn:focus {
+    color: #4F0885 !important;
+    background-color: #fff !important;
+}
+
+.btn-add {
+    border: none !important;
+    color: black !important;
+    padding-top: 10px;
+}
+.btn-add:hover {
+    color: black !important;
+    background-color: white !important;
+}
+.btn-add:active {
+    color: black !important;
+    background-color: white !important;
+}
+.btn-add:focus {
+    color: black !important;
+    background-color: white !important;
+}
+.btn-add:focus-within {
+    color: black !important;
+    background-color: white !important;
+}
+
+.btn-secondary.active {
+    color: white !important;
+    background-color: #4F0885 !important;
+}
+  

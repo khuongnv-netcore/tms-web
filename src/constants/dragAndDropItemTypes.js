@@ -1,0 +1,3 @@
+export default {
+  PERSONALIZED_ACTIVITY: 'PERSONALIZED_ACTIVITY',
+}

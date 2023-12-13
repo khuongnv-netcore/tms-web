@@ -1,0 +1,170 @@
+// -- Variables -->
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Color system
+$iron: #dddedf;
+$gallery: #f0f0f0;
+$concrete: #f3f3f3;
+$alto: #d8d8d8;
+$viking: #5bb7db;
+$curious-blue: #2c91d0;
+$tundora: #4a4a4a;
+$dove-gray: #646464;
+$gray: #808080;
+$san-marino: #3f51b5;
+$purple-heart: #673ab7;
+$persian-red: #d32f2f;
+$apple: #689f38;
+$cerulean: #009ade;
+$gold-drop: #f57c00;
+$seance: #7b1fa2;
+$orange-peel: #ffa000;
+$lemon-ginger: #afb42b;
+$boulder: #757575;
+$abbey: #495057;
+$mine-shaft: #333333;
+$zorba: #9f9794;
+$pomegranate: #f44336;
+$fruit-salad: #4caf50;
+$amber: #ffc107;
+$silver-chalice: #9e9e9e;
+$silver: #bdbdbd;
+$wild-sand: #f5f5f5;
+$cerulean: #00B0CC;
+$botticelli: #D4E5E8;
+$hint-of-green: #e8ffe9;
+$whisper: #f0f1f8;
+$white: #ffffff;
+$bittersweet: #FF6565;
+$dodger-blue: #3B86FF;
+$melrose: #A3A0FB;
+$gun-powder: #43425D;
+$hit-gray: #A4AFB7;
+$trout: #4D4F5C;
+$milano-red: #AF0808;
+$black: #000000;
+$matisse: #216ba5;
+$java: #1DB4CF;
+$outer-space: #343a40;
+$charade: #2e2e40;
+$dusty-gray: #979797;
+$mercury: #e6e6e6;
+
+$cerulean: #00aff0;
+$cinnabar: #eb3d2f;
+$trinidad: #e35205;
+$electric-violet: #9013fe;
+$la-palma: #35a211;
+$buttercup: #f5a623;
+$red-violet: #e215a6;
+
+// -- main colors -->
+// TODO: need update -->
+$color-primary: $gun-powder;
+$color-secondary: $dodger-blue;
+// TODO: <-- need update
+// --
+
+$color-link: transparent;
+$color-info: $cerulean;
+$color-blue: $cerulean;
+$color-light-blue: $java;
+$color-success: $la-palma;
+$color-warning: $buttercup;
+$color-danger: $cinnabar;
+$color-pink: $red-violet;
+$color-violet: $electric-violet;
+$color-white: $white;
+$color-dark: $outer-space;
+$color-light: $alto;
+
+
+
+// Font system
+// $font-family-base: 'Muli', sans-serif;
+$font-family-base: 'Inter-Regular' !default;
+$font-13: 13px !default;
+$font-20: 20px !default;
+$font-12: 12px !default;
+$font-15: 15px !default;
+$font-color-base: $tundora !default;
+
+// typography
+
+$font-size-small: 13px !default;
+$line-height-small: 16px !default;
+
+$font-size-medium: 15px !default;
+$line-height-medium: 19px !default;
+
+$font-size-large: 17px !default;
+$line-height-large: 21px !default;
+
+$font-size-xlarge: 20px !default;
+$line-height-xlarge: 25px !default;
+
+$font-size-xxlarge: 22px !default;
+$line-height-xxlarge: 25px !default;
+
+// Theme
+$bg: $white;
+$border-color-light: $concrete;
+$border-color-dark: $boulder;
+$border-color-highlight: $dodger-blue;
+
+$text-primary-color: $mine-shaft;
+$text-secondary-color: $tundora;
+$text-secondary-color-light: $dove-gray;
+
+$accent-color: $curious-blue;
+$icon-color: $zorba;
+$sidebar-color: #2E2E40;
+$sidebar-color-active: #1DB4CF;
+
+$form-field-disabled-bg-color: $concrete;
+$form-field-disabled-border-color: $mercury;
+
+//Notification
+$colorFav: $curious-blue;
+
+// -- Layout -->
+$header-height: 60px;
+$footer-height: 50px;
+$sidebar-width: 190px;
+$sidebar-toggled-width: 64px;
+$modal-padding: 15px;
+$table-row-vertical-padding: 10px;
+$default-font-size: 15px;
+
+// -- Activity Module Colors -->
+$module-color-unset: $dove-gray;
+$module-color-blue: $cerulean;
+$module-color-orange: $trinidad;
+$module-color-red: $cinnabar;
+$module-color-violet: $electric-violet;
+$module-color-green: $la-palma;
+$module-color-yellow: $buttercup;
+$module-color-pink: $red-violet;
+
+// reset box-shadows -->
+
+$box-shadow-sm: 0 1px 4px rgba($black, .15);
+$box-shadow: 0 2px 8px rgba($black, .15);
+$box-shadow-lg: 0 4px 24px rgba($black, .175);
+
+// default icon bg, color -->
+$icon-bg: $concrete;
+$icon-color: $dove-gray;
+$icon-bg-active: $dove-gray;
+$icon-color-active: $concrete;
+
+// toast colors -->
+$toast-error: $color-danger;
+$toast-success: $color-success;
+
+// client details variable -->
+$client-details-header-height: 50px;
+$client-details-header-margin-bottom: 10px;
+$schedule-box-width: 270px;

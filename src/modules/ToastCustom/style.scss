@@ -1,0 +1,20 @@
+.toast-position {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.toast-transition {
+  &:after {
+    transition: transform 0.3s;
+    transform: translate3d(0, 150%, 0);
+  }
+}
+
+.toast-width {
+  min-width: 300px;
+}
+
+.toast-header-padding {
+  padding-top: 10px;
+}
